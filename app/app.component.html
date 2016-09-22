@@ -7,14 +7,14 @@
 </div>
 
 <div class="container" *ngIf="!loading">
-<div class="wrap">
-    <div *ngFor="let item of news" class="memory-card" (click)="item.disabled ? null : onItemClick(item)" [class.flip]="item.flip" [class.disabled]="item.disabled">
-        <div class="front" [style.backgroundImage]="item.image ?  'url(' + item.urlToImage + ')' : none">
-            <span *ngIf="!item.image">{{ item.title }}</span>
+    <div class="wrap">
+        <div *ngFor="let item of news" class="memory-card" (click)="item.disabled ? null : onItemClick(item)" [class.flip]="item.flip" [class.disabled]="item.disabled">
+            <div class="front" [style.backgroundImage]="item.image ?  'url(' + item.urlToImage + ')' : none">
+                <span *ngIf="!item.image">{{ item.title }}</span>
+            </div>
+            <div class="back"></div>
         </div>
-        <div class="back"></div>
     </div>
-</div>
 </div>
 
 <div class="footer">
