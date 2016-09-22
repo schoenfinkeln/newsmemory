@@ -8,22 +8,26 @@ body {
   margin-top: 1rem;
 }
 
+.wrap {
+  text-align: center;
+  line-height: 1;
+}
+
 .pairs-counter {
   float: right;
   font-size: 1.3rem;
   color: #fff;
-
 }
 
 .memory-card {
-  float: left;
+  display: inline-block;
   position: relative;
   transition: .4s ease-in-out;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
   height: 21vh;
   width: 21vh;
-  margin: 3px;
+  margin: 5px;
 }
 
 .memory-card.flip {
@@ -44,7 +48,6 @@ body {
   background-image: url(/assets/img/back.png);
   background-position: center;
   background-size: cover;
-  
 }
 
 .front {
@@ -68,6 +71,7 @@ body {
   border-radius: 3px;
   backface-visibility: hidden;
   position: absolute;
+  text-align: left;
   left: 3px;
   top: 3px;
   right: 3px;

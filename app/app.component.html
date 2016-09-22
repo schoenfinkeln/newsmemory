@@ -2,18 +2,19 @@
   <h1 class="navbar-brand m-b-0">NewsMemory</h1>
   <span class="text-xs-right pairs-counter" *ngIf="pairsFound > 0">{{ pairsFound }} pair{{ pairsFound > 1 ? 's' : '' }} found!</span>
 </nav>
-
 <div class="container spinner-container" *ngIf="loading">
     <div class="spinner"></div>
 </div>
 
 <div class="container" *ngIf="!loading">
-        <div *ngFor="let item of news" class="memory-card" (click)="item.disabled ? null : onItemClick(item)" [class.flip]="item.flip" [class.disabled]="item.disabled">
-            <div class="front" [style.backgroundImage]="item.image ?  'url(' + item.urlToImage + ')' : none">
-                <span *ngIf="!item.image">{{ item.title }}</span>
-            </div>
-            <div class="back"></div>
+<div class="wrap">
+    <div *ngFor="let item of news" class="memory-card" (click)="item.disabled ? null : onItemClick(item)" [class.flip]="item.flip" [class.disabled]="item.disabled">
+        <div class="front" [style.backgroundImage]="item.image ?  'url(' + item.urlToImage + ')' : none">
+            <span *ngIf="!item.image">{{ item.title }}</span>
+        </div>
+        <div class="back"></div>
     </div>
+</div>
 </div>
 
 <div class="footer">
