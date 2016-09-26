@@ -25,8 +25,8 @@ body {
   transition: .4s ease-in-out;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
-  height: 21vh;
-  width: 21vh;
+  height: 14vh;
+  width: 14vh;
   margin: 5px;
 }
 
@@ -52,6 +52,7 @@ body {
 
 .front {
   font-family: 'Pragati Narrow', sans-serif;
+  font-size: 1.4rem;
   background-color: #fff;
   position: absolute;
   left: 3px;

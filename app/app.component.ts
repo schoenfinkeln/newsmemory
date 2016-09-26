@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     private pairsFound: number;
 
     constructor( private newsService: NewsService ) {
-        this.pairsFound = 9;
+        this.pairsFound = 0;
     }
 
     ngOnInit() {
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
                         this.flipPair(item, this.selectedItem);
                         this.reset();
                         this.blocked = false;
-                    }, 1500);
+                    }, 2500);
                 }
             } else {
                 this.selectedItem = item;
